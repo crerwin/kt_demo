@@ -24,6 +24,9 @@ verifier:
         - operating_system
         - open_ports
         - internet_access
+        - vpc
+        - subnet
+        - sg
       hostnames: public_dns
       username: ubuntu
 
