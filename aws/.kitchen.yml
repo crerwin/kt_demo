@@ -12,6 +12,7 @@ platforms:
 
 transport:
   name: ssh
+  connection_retries: 10
   ssh_key: ~/.ssh/erwin_test.pem
 
 verifier:
