@@ -4,7 +4,7 @@ driver:
   variables:
     docker_host: "unix:///var/run/docker.sock"
     docker_container: "terraform"
-    docker_image: "rastasheep/ubuntu-sshd:latest"
+    docker_image: "ubuntu:latest"
 
 provisioner:
   name: terraform
