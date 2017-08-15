@@ -1,0 +1,30 @@
+---
+driver:
+  name: terraform
+
+provisioner:
+  name: terraform
+  variables:
+    - region=us-east-1
+
+platforms:
+  - name: ubuntu
+
+transport:
+  name: ssh
+  ssh_key: ~/.ssh/erwin_test.pem
+
+verifier:
+  name: terraform
+  format: doc
+  groups:
+    - name: default
+      controls:
+        - operating_system
+        - open_ports
+        - internet_access
+      hostnames: public_dns
+      username: ubuntu
+
+suites:
+  - name: default
